@@ -143,6 +143,13 @@ html {
     animation-iteration-count:infinite;
 }
 
+#line7{
+	animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 1.75s;
+    animation-iteration-count:infinite;
+}
+
 @keyframes wave {
     0%   {opacity: 0%;}
     50% {opacity: 100%;}
