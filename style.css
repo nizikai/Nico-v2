@@ -81,6 +81,20 @@ html {
     100% {opacity:1;}
 }
 
+.text p
+{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 2vw;
+    font-weight: normal;
+
+    animation: fadeIn alternate 2s;
+}
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
 .line{
     padding-bottom: 10vh;
     display: flex;
@@ -133,6 +147,21 @@ html {
     0%   {opacity: 0%;}
     50% {opacity: 100%;}
     100% {opacity: 0%;}
-  }
+}
+
+
+/* ========================================================================================================================= */
+
+@media screen and (max-width: 480px){
+    .text h1{
+        font-size: 6.5vw;
+    }
+
+    .text p{
+        font-size: 3vw;
+    }
+
+
+}
 
 
