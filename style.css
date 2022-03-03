@@ -47,7 +47,7 @@ html {
 .switch a{
     position: relative;
     text-decoration: none;
-    color: #7e7e7e;
+    color: #595959;
     font-size: 18px ;
     letter-spacing: 0.5px;
     z-index: 3;
@@ -56,7 +56,7 @@ html {
 .switch a:after{
     content: "";
     position: absolute;
-    background-color: #f8f8f8;
+    background-color: whitesmoke;
     height: 3px;
     width: 0;
     left: 0;
@@ -66,7 +66,7 @@ html {
 }
 /* nav text while hover*/
 .switch a:hover{
-    color: #ffffff;
+    color: whitesmoke;
     z-index: 3;
 }
 /* nav line while hover */
@@ -336,6 +336,51 @@ html {
     width: 50%;
 }
 
+#keeb11{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+#keeb12{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#keeb13{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1s;
+    animation-iteration-count:infinite;
+}
+
+#divkeeb2{
+    /* padding-top: 2vmax; */
+    display: flex;
+    position: relative;
+    left: 67vw;
+    width: 20%;
+}
+
+#keeb23{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1.25s;
+    animation-iteration-count:infinite;
+}
+#keeb22{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1.75s;
+    animation-iteration-count:infinite;
+}
+#keeb21{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 2.25s;
+    animation-iteration-count:infinite;
+}
 
 .text h1{
     color: whitesmoke;
@@ -356,6 +401,40 @@ html {
     font-weight: normal;
 
     animation: fadeIn alternate 2s;
+}
+
+#see{
+    height: 50vmin;
+}
+#see h2{
+    color: whitesmoke;
+    text-align: center;
+}
+#see a{
+    position: relative;
+    text-decoration: none;
+    color: #595959;
+}
+#see a:after{
+    text-decoration: none;
+    content: "";
+    position: absolute;
+    background-color: whitesmoke;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    z-index: 3;
+}
+/* nav text while hover*/
+#see a:hover{
+    color: whitesmoke;
+    z-index: 3;
+}
+/* nav line while hover */
+#see a:hover:after{
+    width: 100%;
 }
 
 .line{
@@ -426,6 +505,49 @@ html {
     animation-iteration-count:infinite;
 }
 
+#footer h2 {
+    text-align: left;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 4.5vh;
+}
+#footer p {
+    text-align: left;
+    color: whitesmoke;
+}
+#footer h4 {
+    text-align: left;
+    color: #595959;
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+#footer h4:hover{
+    color: whitesmoke;
+}
+#footer a{
+    text-decoration: none;
+}
+
+#footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+#copyright{
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#links{
+    height: 50h;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
 @keyframes fadeIn {
     0% {opacity:0;}
@@ -443,14 +565,32 @@ html {
 
 @media screen and (max-width: 480px){
     .text h1{
-        font-size: 6.5vw;
+        font-size: 8.5vw;
     }
 
     .text p{
-        font-size: 3vw;
+        font-size: 4.5vw;
     }
 
+    #footer{
+        flex-direction: column;
+    }
 
+    #copyright h2{
+        font-size: 5vw;
+    }
+    #copyright p{
+        font-size: 3vw;
+    }
+    
+    #copyright{
+        align-items: center;
+    }
+    #links{
+        align-items: center;
+        height: 80vw;
+        font-size: 4vw;
+    }
 }
 
 
