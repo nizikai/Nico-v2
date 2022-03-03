@@ -21,6 +21,23 @@ html {
     left: 0;
 } 
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #595959; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #252525; 
+  }
+
 #navbar{
     padding: 2vw;
     display: flex;
@@ -58,11 +75,91 @@ html {
 }
 
 .text{
-    height: 90vmin;
+    height: 95vmin;
 }
 
-.text:nth-child(odd){
-    justify-content: flex-end;
+#divtag{
+    display: flex;
+    position: relative;
+    top: 15vmin;
+    left: 15vw;
+    width: 50%;
+}
+
+#tagl{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#tagv2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#tagv3{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+
+#divbinary{
+    padding-top: 2vmax;
+    display: flex;
+    position: relative;
+    left: 75vw;
+    width: 20%;
+}
+
+#b3{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#b2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#b1{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+#b4{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 1s;
+    animation-iteration-count:infinite;
+}
+#b3_2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#b2_2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#b1_2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+#b4_2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 1s;
+    animation-iteration-count:infinite;
 }
 
 .text h1{
@@ -76,10 +173,6 @@ html {
 
     animation: fadeIn alternate 2s;
 }
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
-}
 
 .text p
 {
@@ -89,10 +182,6 @@ html {
     font-weight: normal;
 
     animation: fadeIn alternate 2s;
-}
-@keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
 }
 
 .line{
@@ -148,6 +237,12 @@ html {
  	animation-duration: 2s;
   	animation-delay: 1.75s;
     animation-iteration-count:infinite;
+}
+
+
+@keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }
 
 @keyframes wave {
