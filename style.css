@@ -78,10 +78,11 @@ html {
     height: 95vmin;
 }
 
+/* upper left */
 #divtag{
     display: flex;
     position: relative;
-    top: 15vmin;
+    top: 10vmin;
     left: 15vw;
     width: 50%;
 }
@@ -105,6 +106,7 @@ html {
     animation-iteration-count:infinite;
 }
 
+/* bottom right */
 #divbinary{
     padding-top: 2vmax;
     display: flex;
@@ -162,8 +164,104 @@ html {
     animation-iteration-count:infinite;
 }
 
+/* upper right */
+#divpoppop{
+    transform: rotate(-7deg);
+
+    position: relative;
+    left: 65vw;
+    width: 20%;
+}
+#poppop3{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#poppop2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#poppop1{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+
+/* bottom left */
+#divpop{
+    transform: rotate(-7deg);
+
+    position: relative;
+    top: -1vmin;
+    left: 25vw;
+    width: 20%;
+}
+
+#pop2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#pop1{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#pop3{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+
+#divpen{
+    display: flex;
+    position: relative;
+    /* top: 10vmin; */
+    left: 20vw;
+    width: 50%;
+}
+#pen{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 1.25s;
+    animation-iteration-count:infinite;
+}
+
+#divbling{
+    padding-top: 2vmax;
+    display: flex;
+    position: relative;
+    left: 75vw;
+    width: 20%;
+}
+#bling2{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.25s;
+    animation-iteration-count:infinite;
+}
+#bling1{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#bling3{
+    animation-name: wave;
+ 	animation-duration: 2s;
+  	animation-delay: 0.75s;
+    animation-iteration-count:infinite;
+}
+
+
 .text h1{
-    padding-top: 11vh;
     color: whitesmoke;
     text-align: center;
     font-size: 5vw;
