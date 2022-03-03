@@ -89,19 +89,19 @@ html {
 
 #tagl{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 0.25s;
     animation-iteration-count:infinite;
 }
 #tagv2{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 0.5s;
     animation-iteration-count:infinite;
 }
 #tagv3{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 0.75s;
     animation-iteration-count:infinite;
 }
@@ -117,50 +117,50 @@ html {
 
 #b3{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 0.25s;
+ 	animation-duration: 5s;
+  	animation-delay: 0s;
     animation-iteration-count:infinite;
 }
 #b2{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 0.5s;
     animation-iteration-count:infinite;
 }
 #b1{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 0.75s;
+ 	animation-duration: 5s;
+  	animation-delay: 1s;
     animation-iteration-count:infinite;
 }
 #b4{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 1s;
+ 	animation-duration: 5s;
+  	animation-delay: 1.5s;
     animation-iteration-count:infinite;
 }
 #b3_2{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 0.25s;
+ 	animation-duration: 5s;
+  	animation-delay: 2s;
     animation-iteration-count:infinite;
 }
 #b2_2{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 0.5s;
     animation-iteration-count:infinite;
 }
 #b1_2{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 0.75s;
+ 	animation-duration: 5s;
+  	animation-delay: 1s;
     animation-iteration-count:infinite;
 }
 #b4_2{
     animation-name: wave;
- 	animation-duration: 2s;
-  	animation-delay: 1s;
+ 	animation-duration: 5s;
+  	animation-delay: 1.5s;
     animation-iteration-count:infinite;
 }
 
@@ -229,7 +229,7 @@ html {
 }
 #pen{
     animation-name: wave;
- 	animation-duration: 2s;
+ 	animation-duration: 5s;
   	animation-delay: 1.25s;
     animation-iteration-count:infinite;
 }
@@ -258,6 +258,82 @@ html {
  	animation-duration: 2s;
   	animation-delay: 0.75s;
     animation-iteration-count:infinite;
+}
+
+#divar{
+    position: relative;
+    left: 65vw;
+    width: 20%;
+}
+
+#ar1, #ar1_2, #ar1_3{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+#ar2, #ar2_2, #ar2_3{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#ar3, #ar3_2, #ar3_3{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1s;
+    animation-iteration-count:infinite;
+}
+#ar4{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1.5s;
+    animation-iteration-count:infinite;
+}
+#ar5{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 2s;
+    animation-iteration-count:infinite;
+}
+
+#divare{
+    position: relative;
+    top: 5vmin;
+    left: 25vw;
+    width: 20%;
+}
+
+#are1, #are1_2, #are1_3, #are1_4{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0s;
+    animation-iteration-count:infinite;
+}
+#are2, #are2_2, #are2_3, #are2_4, #are2_5{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 0.5s;
+    animation-iteration-count:infinite;
+}
+#are3, #are3_2, #are3_3, #are3_4, #are3_5{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1s;
+    animation-iteration-count:infinite;
+}
+#are4, #are4_2, #are4_3, #are4_4{
+    animation-name: wave;
+ 	animation-duration: 5s;
+  	animation-delay: 1.5s;
+    animation-iteration-count:infinite;
+}
+
+#divkeeb1{
+    position: relative;
+    /* top: 10vmin; */
+    left: 15vw;
+    width: 50%;
 }
 
 
@@ -289,6 +365,7 @@ html {
 }
 
 #line1{
+    border: 1px solid #595959;
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 0.25s;
@@ -296,6 +373,8 @@ html {
 }
 
 #line2{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 0.5s;
@@ -303,6 +382,8 @@ html {
 }
 
 #line3{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 0.75s;
@@ -310,6 +391,8 @@ html {
 }
 
 #line4{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 1s;
@@ -317,6 +400,8 @@ html {
 }
 
 #line5{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 1.25s;
@@ -324,6 +409,8 @@ html {
 }
 
 #line6{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 1.5s;
@@ -331,6 +418,8 @@ html {
 }
 
 #line7{
+    border: 1px solid #595959;
+
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 1.75s;
