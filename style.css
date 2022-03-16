@@ -78,6 +78,21 @@ html {
     height: 95vmin;
 }
 
+.introtext{
+    height: 50vmin;
+}
+
+.introtext h1{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 5vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    animation: fadeIn alternate 2s;
+}
+
 /* upper left */
 #divtag{
     display: flex;
@@ -169,7 +184,7 @@ html {
     transform: rotate(-7deg);
 
     position: relative;
-    left: 65vw;
+    left: 62vw;
     width: 20%;
 }
 #poppop3{
@@ -441,10 +456,12 @@ html {
     padding-bottom: 10vh;
     display: flex;
     justify-content: center;
+    animation: fadeIn 5s;
 }
 
 #line1{
     border: 1px solid #595959;
+    
 	animation-name: wave;
  	animation-duration: 2s;
   	animation-delay: 0.25s;
@@ -568,6 +585,10 @@ html {
         font-size: 8.5vw;
     }
 
+    .introtext h1{
+        font-size: 8.5vw;
+    }
+
     .text p{
         font-size: 4.5vw;
     }
@@ -580,7 +601,7 @@ html {
         font-size: 5vw;
     }
     #copyright p{
-        font-size: 3vw;
+        font-size: 2vw;
     }
     
     #copyright{
