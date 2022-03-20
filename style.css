@@ -419,40 +419,6 @@ html {
     animation: fadeIn alternate 2s;
 }
 
-#see{
-    height: 50vmin;
-}
-#see h2{
-    color: whitesmoke;
-    text-align: center;
-}
-#see a{
-    position: relative;
-    text-decoration: none;
-    color: #595959;
-}
-#see a:after{
-    text-decoration: none;
-    content: "";
-    position: absolute;
-    background-color: whitesmoke;
-    height: 3px;
-    width: 0;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-    z-index: 3;
-}
-/* nav text while hover*/
-#see a:hover{
-    color: whitesmoke;
-    z-index: 3;
-}
-/* nav line while hover */
-#see a:hover:after{
-    width: 100%;
-}
-
 .line{
     padding-bottom: 10vh;
     display: flex;
@@ -522,6 +488,40 @@ html {
   	animation-delay: 1.75s;
     animation-iteration-count:infinite;
 }
+
+.see{
+    height: 50vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#goProject {
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  
+  #goProject {
+    background-color: black;
+    color: whitesmoke;
+    border: 2px solid whitesmoke;
+  }
+  
+  #goProject:hover {
+    background-color: whitesmoke;
+    color: black;
+  }
+
 
 #footer h2 {
     text-align: left;
@@ -615,7 +615,7 @@ html {
     }
 }
 
-/* ========================================================================================================================= */
+/* Kyoukai no Katana - Beyond the Boundaries ==================================================================================== */
 
 .phone{
     height: 120vh;
