@@ -27,4 +27,4 @@ setInterval(() => {
   console.log(scrollpos, delay);
 
   video.currentTime = delay;
-}, 45);
+}, 60);
