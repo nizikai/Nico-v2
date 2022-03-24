@@ -34,10 +34,9 @@ const phonecanvas = document.getElementById("phonecanvas");
 const phonecontext = phonecanvas.getContext("2d");
 
 //get frame
-const frameCount = 148;
+const frameCount = 122;
 const currentFrame = index => (
-  "/Resources/Phone/${index.toString().padStart(4, '0')}.jpg"
-  // `https://www.apple.com/105/media/us/airpods-pro/2019/1299e2f5_9206_4470_b28e_08307a42f19b/anim/sequence/large/01-hero-lightpass/${index.toString().padStart(4, '0')}.jpg`
+  `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
 )
 
 const preloadImages = () => {
@@ -49,8 +48,10 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
-phonecanvas.width=1158; //change the canvas size according to frame size
-phonecanvas.height=770;
+// phonecanvas.width=1158; //change the canvas size according to frame size
+// phonecanvas.height=770;
+phonecanvas.width=2340;
+phonecanvas.height=1080;
 img.onload=function(){
   phonecontext.drawImage(img, 0, 0);
 }
