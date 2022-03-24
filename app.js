@@ -36,7 +36,8 @@ const phonecontext = phonecanvas.getContext("2d");
 //get frame
 const frameCount = 122;
 const currentFrame = index => (
-  `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
+  // `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
+  `https://github.com/nizikai/Nico-v2/blob/master/Resources/Phone/${index.toString().padStart(4, '0')}?raw=true`
 )
 
 const preloadImages = () => {
