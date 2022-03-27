@@ -648,7 +648,9 @@ html {
 
 /* test later delete this */
 .btbcard h1{
+    padding: 25px;
     color: whitesmoke;
+    font-weight: 700;
 
 }
 
@@ -673,6 +675,7 @@ html {
         background-image: none;
     }
 
+    /* perlu ganti font size buat hp */ 
     
 }
 
@@ -707,8 +710,8 @@ canvas {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 70vw;
-    max-height: 70vh;
+    max-width: 80vw;
+    max-height: 80vh;
   }
 /* ============================================================================================================================================= */
 
