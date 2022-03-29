@@ -591,11 +591,12 @@ html {
     }
 
     .text p{
-        font-size: 4.5vw;
+        font-size: 4vw;
     }
 
     #footer{
-        flex-direction: column;
+        margin-top: 7vh;
+        flex-direction: column-reverse;
     }
 
     #copyright h2{
@@ -612,6 +613,9 @@ html {
         align-items: center;
         height: 80vw;
         font-size: 4vw;
+    }
+    .switch a{
+        font-size: 16px;
     }
 }
 
@@ -634,7 +638,7 @@ html {
     height: 250px;
 }
 
-.btbcard{
+.btbcard, .dtacard, .lbwcard, .lbacard, .rpucard{
     background-image: url('./Resources/outline.png');
     width: 546px;
     height: 196px;
@@ -642,17 +646,42 @@ html {
 	transition: background-image 0.7s;
 }
 
+.btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1{
+    padding: 25px;
+    color: whitesmoke;
+    font-weight: 700;
+}
+
+.btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p{
+    color: whitesmoke;
+    font-weight: 400;
+    padding-left: 25px;
+    padding-right: 25px;
+
+}
+
+
+
 .btbcard:hover{
     background-image: url('./Resources/btbcard.png');
 }
 
-/* test later delete this */
-.btbcard h1{
-    padding: 25px;
-    color: whitesmoke;
-    font-weight: 700;
-
+.dtacard:hover{
+    background-image: url('./Resources/dtacard.png');
 }
+
+.lbwcard:hover{
+    background-image: url('./Resources/lbwcard.png');
+}
+
+.lbacard:hover{
+    background-image: url('./Resources/lbacard.png');
+}
+
+.rpucard:hover{
+    background-image: url('./Resources/rpucard.png');
+}
+
 
 
 
@@ -660,23 +689,38 @@ html {
 @media screen and (max-width: 480px){
     #projecttext{
         width: 80%;
-        font-size: 8vw;
+        font-size: 5.6vw;
+        height: 30vh;
     }
 
-    .btbcard{
-        width: 300px;
-        height: 100px;
+    .btbcard, .dtacard, .lbwcard, .lbacard, .rpucard{
+        width: 85vw;
+        height: 35vw;
         background-image: none;
         border: 1px solid whitesmoke;
         border-radius: 10px;
     }
 
-    .btbcard:hover{
+    .btbcard:hover, .dtacard:hover, .lbwcard:hover, .lbacard:hover, .rpucard:hover{
         background-image: none;
     }
 
-    /* perlu ganti font size buat hp */ 
+    .btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1{
+        color: whitesmoke;
+        font-weight: 700;
+        font-size: medium;
+    }
+
+    .btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p{
+        color: whitesmoke;
+        font-weight: 400;
+        font-size: small;
+    }
     
+    #cards a{
+        text-decoration: none;
+        height: 45vw;
+    }
 }
 
 
