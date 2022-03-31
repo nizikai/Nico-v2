@@ -490,7 +490,7 @@ html {
 }
 
 .see{
-    height: 50vmin;
+    height: 35vmin;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -550,11 +550,11 @@ html {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 50vh;
+    height: 35vh;
 }
 
 #copyright{
-    height: 50vh;
+    height: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -728,6 +728,10 @@ html {
         text-decoration: none;
         height: 45vw;
     }
+
+    .more{
+        font-size: 12px;
+    }
 }
 
 
@@ -753,8 +757,8 @@ html {
 } */
 
 #beyondbody {
-    /* height: 500vh; */
-    /* z-index: -1; */
+    /* height: 100vh; */
+    z-index: -1;
 }
 
 #phonecanvas {
@@ -769,9 +773,8 @@ html {
 
 #btbtitle{
     padding-top: 15vh;
-    height: 700vh;
+    height: 480vh;
     z-index: 1;
-
 }
 
 #btbtitle h1{
@@ -789,6 +792,25 @@ html {
     font-weight: bold;
     z-index: 2;
     font-size: 5vw;
+}
+
+#btbdetail h2{
+    text-align: center;
+    color: #595959;
+    height: 30vh;
+}
+
+#btbdetail p{
+    text-align: center;
+    color: #595959;
+    height: 30vh;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 480px){
+    #btbtitle{
+        padding-top: 35vh;
+    }
 }
 
 /* ============================================================================================================================================= */
