@@ -30,6 +30,7 @@
 // }, 60);
 
 
+
 //FLIPBOOK
 
 const html = document.documentElement;
@@ -37,7 +38,7 @@ const phonecanvas = document.getElementById("phonecanvas");
 const phonecontext = phonecanvas.getContext("2d");
 
 //get frame
-const frameCount = 122;
+const frameCount = 126;
 const currentFrame = index => (
   `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
   // `https://nicoprasetyo.me/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
@@ -52,8 +53,6 @@ const preloadImages = () => {
 
 const img = new Image()
 img.src = currentFrame(1);
-// phonecanvas.width=1158; //change the canvas size according to frame size
-// phonecanvas.height=770;
 phonecanvas.width=2340;
 phonecanvas.height=1080;
 img.onload=function(){
@@ -61,8 +60,8 @@ img.onload=function(){
 }
 
 window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop - 5000;
-  const maxScrollTop = html.scrollHeight - window.innerHeight - 5000; //max scroll or end
+  const scrollTop = html.scrollTop - 3000;
+  const maxScrollTop = html.scrollHeight - window.innerHeight; //max scroll or end
   const scrollFraction = scrollTop / maxScrollTop; //scroll progress
   const frameIndex = Math.min(
     frameCount - 1,
