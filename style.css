@@ -702,7 +702,7 @@ html {
 
     .btbcard, .dtacard, .lbwcard, .lbacard, .rpucard{
         width: 85vw;
-        height: 35vw;
+        height: 38vw;
         background-image: none;
         border: 1px solid whitesmoke;
         border-radius: 10px;
@@ -772,7 +772,7 @@ html {
 }
 
 #btbtitle{
-    padding-top: 15vh;
+    padding-top: 18vh;
     height: 480vh;
     z-index: 1;
 }
@@ -810,6 +810,11 @@ html {
 @media screen and (max-width: 480px){
     #btbtitle{
         padding-top: 35vh;
+    }
+
+    #phonecanvas {
+        max-width: 150vw;
+        max-height: 150vh;
     }
 }
 
