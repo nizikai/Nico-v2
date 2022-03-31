@@ -657,10 +657,7 @@ html {
     font-weight: 400;
     padding-left: 25px;
     padding-right: 25px;
-
 }
-
-
 
 .btbcard:hover{
     background-image: url('./Resources/btbcard.png');
@@ -681,9 +678,6 @@ html {
 .rpucard:hover{
     background-image: url('./Resources/rpucard.png');
 }
-
-
-
 
 
 @media screen and (max-width: 480px){
