@@ -764,10 +764,11 @@ html {
     transform: translate(-50%, -50%);
     max-width: 80vw;
     max-height: 80vh;
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 #btbtitle{
+    padding-top: 15vh;
     height: 700vh;
     z-index: 1;
 
@@ -778,7 +779,16 @@ html {
     color: #252525;
     font-weight: bold;
     z-index: 1;
-    font-size: 7vw;
+    font-size: 10vw;
+}
+
+#btbtitle h2{
+    transform: translate(0,-90%);
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    z-index: 2;
+    font-size: 5vw;
 }
 
 /* ============================================================================================================================================= */
