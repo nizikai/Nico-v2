@@ -753,11 +753,8 @@ html {
 } */
 
 #beyondbody {
-    height: 500vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: -1;
+    /* height: 500vh; */
+    /* z-index: -1; */
 }
 
 #phonecanvas {
@@ -767,7 +764,7 @@ html {
     transform: translate(-50%, -50%);
     max-width: 80vw;
     max-height: 80vh;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 #btbtitle{
@@ -781,7 +778,7 @@ html {
     color: #252525;
     font-weight: bold;
     z-index: 1;
-    font-size: 19vh;
+    font-size: 7vw;
 }
 
 /* ============================================================================================================================================= */

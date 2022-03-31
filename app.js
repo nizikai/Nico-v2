@@ -60,7 +60,7 @@ img.onload=function(){
 }
 
 window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop - 3000;
+  const scrollTop = html.scrollTop;
   const maxScrollTop = html.scrollHeight - window.innerHeight; //max scroll or end
   const scrollFraction = scrollTop / maxScrollTop; //scroll progress
   const frameIndex = Math.min(
