@@ -29,6 +29,9 @@
 //   video.currentTime = delay;
 // }, 60);
 
+
+//FLIPBOOK
+
 const html = document.documentElement;
 const phonecanvas = document.getElementById("phonecanvas");
 const phonecontext = phonecanvas.getContext("2d");
@@ -58,8 +61,8 @@ img.onload=function(){
 }
 
 window.addEventListener('scroll', () => {  
-  const scrollTop = html.scrollTop;
-  const maxScrollTop = html.scrollHeight - window.innerHeight; //max scroll or end
+  const scrollTop = html.scrollTop - 5000;
+  const maxScrollTop = html.scrollHeight - window.innerHeight - 5000; //max scroll or end
   const scrollFraction = scrollTop / maxScrollTop; //scroll progress
   const frameIndex = Math.min(
     frameCount - 1,

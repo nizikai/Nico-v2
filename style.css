@@ -625,6 +625,8 @@ html {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+
+    animation: fadeIn alternate 2s;
 }
 
 #cards{
@@ -677,6 +679,17 @@ html {
 
 .rpucard:hover{
     background-image: url('./Resources/rpucard.png');
+}
+
+.more{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: normal;
+    padding-top: 20vh;
+
+    height: 50vh;
+    animation: fadeIn alternate 2s;
 }
 
 
@@ -741,15 +754,35 @@ html {
 
 #beyondbody {
     height: 500vh;
-  }
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: -1;
+}
 
-canvas {
+#phonecanvas {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     max-width: 80vw;
     max-height: 80vh;
-  }
+    z-index: -1;
+}
+
+#btbtitle{
+    height: 700vh;
+    z-index: 1;
+
+}
+
+#btbtitle h1{
+    text-align: center;
+    color: #252525;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 19vh;
+}
+
 /* ============================================================================================================================================= */
 
