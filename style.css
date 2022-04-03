@@ -773,7 +773,7 @@ html {
 
 #btbtitle{
     padding-top: 18vh;
-    height: 480vh;
+    height: 100vh;
     z-index: 1;
 }
 
@@ -797,7 +797,7 @@ html {
 #btbdetail h2{
     text-align: center;
     color: #595959;
-    height: 30vh;
+    height: 500vh;
 }
 
 #btbdetail p{
@@ -819,4 +819,64 @@ html {
 }
 
 /* ============================================================================================================================================= */
+#drawbody {
+    /* height: 100vh; */
+    z-index: -1;
+}
 
+#drawcanvas {
+    position: fixed;
+    /* left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    max-width: 80vw;
+    max-height: 80vh;
+    z-index: -1;
+}
+
+#dtatitle{
+    padding-top: 18vh;
+    height: 100vh;
+    z-index: 1;
+}
+
+#dtatitle h1{
+    text-align: center;
+    color: #252525;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 10vw;
+}
+
+#dtatitle h2{
+    transform: translate(0,-90%);
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    z-index: 2;
+    font-size: 5vw;
+}
+
+#dtadetail h2{
+    text-align: center;
+    color: #595959;
+    height: 500vh;
+}
+
+#dtadetail p{
+    text-align: center;
+    color: #595959;
+    height: 30vh;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 480px){
+    #dtatitle{
+        padding-top: 35vh;
+    }
+
+    #drawcanvas {
+        max-width: 150vw;
+        max-height: 150vh;
+    }
+}

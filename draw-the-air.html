@@ -1,1 +1,87 @@
-draw the air
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw the Air!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./Resources/N.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id = "navbar">
+        <div class="menu">
+            <a href="./index.html"> <img src="./Resources/N.png" width=30vw> </a>
+        </div>
+        <div class=switch>
+            <nav>
+                <a href="./projects.html">Projects</a>
+            </nav>
+        </div>
+    </section>
+
+    <section id="dtatitle">
+        <h1>Augmented Reality</h1>
+        <h2>Draw the Air!</h2>
+    </section>
+
+    <section id="dtadetail">
+        <h2>an Augmented Reality App that allows user to <span style="color:whitesmoke">draw in 3D space</span><br>only by using a mobile phone</h2>
+        <!-- <p>This app is not published yet</p> -->
+    </section>
+
+    <section id="drawbody">
+        <section id="draw">
+            <canvas id="drawcanvas"></canvas>
+        </section>
+    </section>
+
+    <section class="see">
+        <a href="./projects.html"><button id="goProject">See another projects</button></a>
+    </section>
+
+    <hr color="#7e7e7e">
+
+    <section id="footer">
+        <div id="copyright">
+            <h2>Let's connect digitally<br></h2>
+            <p><span>&copy;</span>2022 Nico Prasetyo // Soli Deo Gloria</p>
+        </div>
+        <div id="links">
+            <a href="mailto:nprasetyo@student.ciputra.ac.id" target="_blank"><h4>Email<br></h4></a>
+            <a href="https://www.instagram.com/nizikai/?hl=id" target="_blank"><h4>Instagram<br></h4></a>
+            <a href="https://api.whatsapp.com/send?phone=6282252855386&text=Hi%20Nico!%20I%20found%20you%20from%20your%20website!" target="_blank"><h4>WhatsApp<br></h4></a>
+            <a href="https://line.me/ti/p/~nicoprasetyo10" target="_blank"><h4>Line<br></h4></a>
+        </div>
+    </section>
+    
+
+    <!-- kyoukai no kanata -->
+
+    <!-- <div class="phone">
+        <h2><span style="color:whitesmoke">an Augmented Reality App of The Solar System</span> with <br> exact rotation speed of each planet scaled down.</h2>
+        <center>
+            <video src = "./Resources/Phone.mp4"></video>
+        </center>
+    </div> -->
+
+    <!-- scrollMagic, enable scrolling attribute count -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+        integrity="sha512-HzAEuXwhLxwm/Jj+5ecdjzrRVrjuh2ZeIxyT1Ln37TO5pWNMnKBuU7cfd1wvRQ/k86w1oC174Yk1T7aRlBpIcA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"
+        integrity="sha512-jlbgjhSLRQsQc/bits6lHjywF3n/NLO3Sz1rwa9gsUnCOi0f0lD/yAul75UNOzIiDg35zaJJ3BKT3zo6+i9lQA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- scrollMagicDebug -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/debug.addIndicators.js"
+        integrity="sha512-mq6TSOBEH8eoYFBvyDQOQf63xgTeAk7ps+MHGLWZ6Byz0BqQzrP+3GIgYL+KvLaWgpL8XgDVbIRYQeLa3Vqu6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- link to app js -->
+    <script src="appdraw.js"></script>
+    
+</body>
+</html>
