@@ -737,11 +737,13 @@ html {
 
 
 /* Kyoukai no Katana - Beyond the Boundaries ==================================================================================== */
+/* Draw the Air! =========================== ==================================================================================== */
 
-.phone{
+
+/* .phone{
     height: 120vh;
     background-color: black;
-}
+} */
 
 /* .phone video{
     width: 70%;
@@ -756,7 +758,7 @@ html {
     padding: 0.7vh;
 } */
 
-#beyondbody {
+#beyondbody, #drawbody{
     /* height: 100vh; */
     z-index: -1;
 }
@@ -797,7 +799,7 @@ html {
 #btbdetail h2{
     text-align: center;
     color: #595959;
-    height: 500vh;
+    height: 550vh;
 }
 
 #btbdetail p{
@@ -812,23 +814,24 @@ html {
         padding-top: 35vh;
     }
 
-    #phonecanvas {
+    #phonecanvas{
         max-width: 150vw;
         max-height: 150vh;
     }
 }
 
-/* ============================================================================================================================================= */
-#drawbody {
+/* Draw the Air! =============================================================================================================== */
+
+#drawbody{
     /* height: 100vh; */
     z-index: -1;
 }
 
 #drawcanvas {
     position: fixed;
-    /* left: 50%;
+    left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     max-width: 80vw;
     max-height: 80vh;
     z-index: -1;
@@ -860,7 +863,7 @@ html {
 #dtadetail h2{
     text-align: center;
     color: #595959;
-    height: 500vh;
+    height: 550vh;
 }
 
 #dtadetail p{
@@ -875,7 +878,7 @@ html {
         padding-top: 35vh;
     }
 
-    #drawcanvas {
+    #drawcanvas{
         max-width: 150vw;
         max-height: 150vh;
     }
