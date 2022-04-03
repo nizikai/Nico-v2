@@ -798,7 +798,7 @@ html {
 
 #btbdetail h2{
     text-align: center;
-    color: #595959;
+    color: #7a7a7a;
     height: 550vh;
     font-size: 2.5vw;
 }
@@ -870,7 +870,7 @@ html {
 
 #dtadetail h2{
     text-align: center;
-    color: #595959;
+    color: #7a7a7a;
     height: 600vh;
     font-size: 2.5vw;
 }
@@ -905,7 +905,7 @@ html {
 /* Luxury Bubble Desktop Appliaction =================================================================================================== */
 
 #lbdbody{
-    height: 500vh;
+    height: 380vh;
     z-index: -1;
 }
 
@@ -944,9 +944,12 @@ html {
 
 #lbddetail h2{
     text-align: center;
-    color: #595959;
-    /* height: 600vh; */
-    font-size: 2.5vw;
+    color: whitesmoke;
+    font-size: 2vw;
+    margin-left: 17vw;
+    margin-right: 3vw;
+
+    text-align: left;
 }
 
 #lbddetail p{
@@ -961,6 +964,10 @@ html {
         transform: translate(0,-60%);
     }
 
+    #lbdbody{
+        height: 430vh;
+        z-index: -1;
+    }
     #lbdtitle{
         padding-top: 35vh;
     }
@@ -971,7 +978,12 @@ html {
     }
 
     #lbddetail h2{
-        font-size: 6.5vw;
-        height: 700vh;
+        text-align: center;
+        color: whitesmoke;
+        font-size: 2.8vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    
+        text-align: left;
     }
 }
