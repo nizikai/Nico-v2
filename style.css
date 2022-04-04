@@ -1139,7 +1139,7 @@ html {
 #rpudetails h2{
     text-align: center;
     color: #7a7a7a;
-    height: 550vh;
+    height: 500vh;
     font-size: 2.5vw;
 }
 
@@ -1156,7 +1156,6 @@ html {
     }
 
     #rpubody{
-        height: 430vh;
         z-index: -1;
     }
     #rputitle{
