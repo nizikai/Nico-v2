@@ -5,7 +5,7 @@ const phonecanvas = document.getElementById("lbwcanvas");
 const phonecontext = phonecanvas.getContext("2d");
 
 //get frame
-const frameCount = 160;
+const frameCount = 208;
 const currentFrame = index => (
   `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Web/${index.toString().padStart(4, '0')}.jpg`
 )
