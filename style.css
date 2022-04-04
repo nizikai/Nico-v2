@@ -987,3 +987,90 @@ html {
         text-align: left;
     }
 }
+
+
+/* Luxury Bubble Web Appliaction =================================================================================================== */
+
+#lbwbody{
+    height: 380vh;
+    z-index: -1;
+}
+
+#lbwcanvas {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80vw;
+    max-height: 80vh;
+    z-index: -1;
+}
+
+#lbwtitle{
+    padding-top: 18vh;
+    height: 100vh;
+    z-index: 1;
+}
+
+#lbwtitle h1{
+    text-align: center;
+    color: #252525;
+    font-weight: bold;
+    z-index: 1;
+    font-size: 9vw;
+}
+
+#lbwtitle h2{
+    transform: translate(0,-75%);
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+    z-index: 2;
+    font-size: 7vw;
+}
+
+#lbwdetail h2{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 2vw;
+    margin-left: 17vw;
+    margin-right: 3vw;
+
+    text-align: left;
+}
+
+#lbwdetail p{
+    text-align: center;
+    color: #595959;
+    height: 30vh;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 480px){
+    #lbwtitle h2{
+        transform: translate(0,-60%);
+    }
+
+    #lbwbody{
+        height: 430vh;
+        z-index: -1;
+    }
+    #lbwtitle{
+        padding-top: 35vh;
+    }
+
+    #lbwcanvas{
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    #lbwdetail h2{
+        text-align: center;
+        color: whitesmoke;
+        font-size: 2.8vh;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    
+        text-align: left;
+    }
+}

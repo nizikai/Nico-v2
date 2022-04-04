@@ -8,7 +8,6 @@ const phonecontext = phonecanvas.getContext("2d");
 const frameCount = 174;
 const currentFrame = index => (
   `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Desktop/${index.toString().padStart(4, '0')}.jpg`
-  // `https://nicoprasetyo.me/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
 )
 
 const preloadImages = () => {
