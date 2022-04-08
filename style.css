@@ -28,13 +28,13 @@ html {
   }
   
    
-  /* Handle */
+  /* scrollbar */
   ::-webkit-scrollbar-thumb {
     background: #595959; 
     border-radius: 10px;
   }
   
-  /* Handle on hover */
+  /* scrollbar on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #252525; 
   }
@@ -489,12 +489,39 @@ html {
     animation-iteration-count:infinite;
 }
 
+.end{
+    height: 5vmin;
+    display: flex;
+    justify-content: center;
+}
+
+.endbar {
+    border-radius: 10px;
+    background: #252525;
+    padding-top: 2vh;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    width: 96vw;
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.endbar p{
+    color: whitesmoke;
+}
+
+.endbarright{
+    text-align: right;
+}
+
 .see{
-    height: 35vmin;
+    height: 25vmin;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #goProject {
@@ -580,6 +607,11 @@ html {
 
 
 /* ========================================================================================================================= */
+@media screen and (max-width: 1000px){
+    .endbar p{
+        font-size: 1.8vmax;
+    }
+}
 
 @media screen and (max-width: 480px){
     .text h1{
@@ -617,6 +649,17 @@ html {
     .switch a{
         font-size: 16px;
     }
+
+    .endbar {
+       padding-top: 2vmin;
+       
+    }
+
+    .endbar p{
+        font-size: 1.8vmax;
+    }
+
+    
 }
 
 /* projects ===================================================================================================================== */
@@ -920,8 +963,8 @@ html {
 }
 
 #lbdtitle{
-    padding-top: 18vh;
-    height: 100vh;
+    padding-top: 16vh;
+    height: 77vh;
     z-index: 1;
 }
 
@@ -1139,7 +1182,7 @@ html {
 #rpudetails h2{
     text-align: center;
     color: #7a7a7a;
-    height: 500vh;
+    height: 600vh;
     font-size: 2.5vw;
 }
 

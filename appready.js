@@ -5,7 +5,7 @@ const phonecanvas = document.getElementById("rpucanvas");
 const phonecontext = phonecanvas.getContext("2d");
 
 //get frame
-const frameCount = 185;
+const frameCount = 200;
 const currentFrame = index => (
   `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Uwu/${index.toString().padStart(4, '0')}.jpg`
 )
