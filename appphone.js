@@ -38,7 +38,7 @@ const phonecanvas = document.getElementById("phonecanvas");
 const phonecontext = phonecanvas.getContext("2d");
 
 //get frame
-const frameCount = 177;
+const frameCount = 204;
 const currentFrame = index => (
   `https://raw.githubusercontent.com/nizikai/Nico-v2/master/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
   // `https://nicoprasetyo.me/Resources/Phone/${index.toString().padStart(4, '0')}.jpg`
