@@ -816,8 +816,8 @@ html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    max-width: 80vw;
-    max-height: 80vh;
+    max-width: 100vw;
+    max-height: 100vh;
     z-index: -1;
 }
 
