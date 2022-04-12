@@ -684,7 +684,7 @@ html {
     height: 250px;
 }
 
-.btbcard, .dtacard, .lbwcard, .lbacard, .rpucard{
+.btbcard, .dtacard, .lbwcard, .lbacard, .rpucard, .pnrmcard{
     background-image: url('./Resources/outline.png');
     width: 546px;
     height: 196px;
@@ -692,13 +692,13 @@ html {
 	transition: background-image 0.7s;
 }
 
-.btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1{
+.btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1, .pnrmcard h1{
     padding: 25px;
     color: whitesmoke;
     font-weight: 700;
 }
 
-.btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p{
+.btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p, .pnrmcard p {
     color: whitesmoke;
     font-weight: 400;
     padding-left: 25px;
@@ -723,6 +723,10 @@ html {
 
 .rpucard:hover{
     background-image: url('./Resources/rpucard.png');
+}
+
+.pnrmcard:hover{
+    background-image: url('./Resources/pnrmcard.png');
 }
 
 .more{
