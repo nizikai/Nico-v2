@@ -748,7 +748,7 @@ html {
         height: 30vh;
     }
 
-    .btbcard, .dtacard, .lbwcard, .lbacard, .rpucard{
+    .btbcard, .dtacard, .lbwcard, .lbacard, .rpucard, .pnrmcard{
         width: 85vw;
         height: 38vw;
         background-image: none;
@@ -756,17 +756,17 @@ html {
         border-radius: 10px;
     }
 
-    .btbcard:hover, .dtacard:hover, .lbwcard:hover, .lbacard:hover, .rpucard:hover{
+    .btbcard:hover, .dtacard:hover, .lbwcard:hover, .lbacard:hover, .rpucard:hover, .pnrmcard:hover{
         background-image: none;
     }
 
-    .btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1{
+    .btbcard h1, .dtacard h1, .lbwcard h1, .lbacard h1, .rpucard h1, .pnrmcard h1{
         color: whitesmoke;
         font-weight: 700;
         font-size: medium;
     }
 
-    .btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p{
+    .btbcard p, .dtacard p, .lbwcard p, .lbacard p, .rpucard p, .pnrmcard p{
         color: whitesmoke;
         font-weight: 400;
         font-size: small;
