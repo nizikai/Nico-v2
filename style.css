@@ -490,7 +490,8 @@ html {
 }
 
 .end{
-    height: 5vmin;
+    /* height: 5vmin; */
+    height: 30vmax;
     display: flex;
     justify-content: center;
 }
@@ -817,8 +818,8 @@ html {
 }
 
 #btbtitle{
-    padding-top: 18vh;
-    height: 100vh;
+    padding-top: 16vh;
+    height: 77vh;
     z-index: 1;
 }
 
@@ -889,8 +890,8 @@ html {
 }
 
 #dtatitle{
-    padding-top: 18vh;
-    height: 100vh;
+    padding-top: 16vh;
+    height: 77vh;
     z-index: 1;
 }
 
@@ -1050,8 +1051,8 @@ html {
 }
 
 #lbwtitle{
-    padding-top: 18vh;
-    height: 100vh;
+    padding-top: 16vh;
+    height: 77vh;
     z-index: 1;
 }
 
@@ -1149,8 +1150,8 @@ html {
 }
 
 #rputitle{
-    padding-top: 18vh;
-    height: 100vh;
+    padding-top: 16vh;
+    height: 77vh;
     z-index: 1;
 }
 
