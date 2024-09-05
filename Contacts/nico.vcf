@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Prasetyo;Nico;;;
+FN:Nico Prasetyo
+ORG:Example Company
+TITLE:Software Engineer
+TEL;TYPE=WORK,VOICE:+62-822-5285-5386
+EMAIL:me@nicoprasetyo.com
+END:VCARD
