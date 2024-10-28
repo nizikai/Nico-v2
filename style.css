@@ -56,7 +56,6 @@ html {
     animation-delay: 2.8s;
 }
 
-
 @keyframes blur {
     0% {
         filter: blur(5px);
@@ -106,3 +105,17 @@ html {
     z-index: 4;
     animation-delay: 1.2s;
 }
+
+#full-screen {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    animation: blur ease-out forwards;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
