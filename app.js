@@ -1,3 +1,18 @@
+///MARK: - INTRO ANIMATION
+
+function showProjectsAfterIntro() {
+    const intro = document.getElementById('intro');
+    const projects = document.getElementById('projects');
+
+    projects.style.display = 'none'; 
+    setTimeout(() => {
+        intro.style.display = 'none';
+        projects.style.display = 'flex';
+    }, 4000); 
+}
+
+window.onload = showProjectsAfterIntro;
+
 ///MARK: - Cursor
 
 // Cursor creation
@@ -31,8 +46,22 @@ document.addEventListener('mouseup', () => {
     cursor.classList.remove('active');
 });
 
+// Touch events (for mobile): hide cursor
+document.addEventListener('touchstart', () => {
+    cursor.classList.add('hidden'); // Hide cursor on mobile tap
+});
+
+// Mouse leaves window: hide cursor
+document.addEventListener('mouseleave', () => {
+    cursor.classList.add('hidden');
+});
+
+document.addEventListener('mouseenter', () => {
+    cursor.classList.remove('hidden');
+});
+
 // Make cursor as a line while hovering on texts
-document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6').forEach(el => {
+document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
     el.addEventListener('mouseenter', () => {
         cursor.classList.add('hover');
     });
