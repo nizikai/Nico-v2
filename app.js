@@ -1,19 +1,41 @@
+///MARK: - WEB SETTINGS
+
+window.history.scrollRestoration = 'manual';
+
+window.onload = function () {
+    window.scrollTo(0, 0);
+};
+
 ///MARK: - INTRO ANIMATION
 
-function showProjectsAfterIntro() {
-    const intro = document.getElementById('intro');
-    const projects = document.getElementById('projects');
+const intro = document.getElementById('intro');
+const projects = document.getElementById('projects');
+const cards = document.querySelectorAll('.cards'); 
 
-    projects.style.display = 'none'; 
-    setTimeout(() => {
+function showProjectsAfterIntro() {
+    projects.style.display = 'none';
+    cards.forEach((card) => (card.style.display = 'none')); 
+
+    if (sessionStorage.getItem('introShown')) {
         intro.style.display = 'none';
         projects.style.display = 'flex';
-    }, 4000); 
+        cards.forEach((card) => (card.style.display = 'flex')); 
+        updateThumbSize();
+    } else {
+        setTimeout(() => {
+            intro.style.display = 'none';
+            projects.style.display = 'flex';
+            cards.forEach((card) => (card.style.display = 'flex')); 
+
+            sessionStorage.setItem('introShown', 'true');
+            updateThumbSize();
+        }, 3000);
+    }
 }
 
 window.onload = showProjectsAfterIntro;
 
-/// MARK: - Cursor
+/// MARK: - CURSOR
 
 // Cursor creation
 const cursor = document.createElement('div');
@@ -32,6 +54,7 @@ function updateCursorPosition(e) {
 // Smoothly update cursor position on mouse move
 document.addEventListener('mousemove', (e) => {
     requestAnimationFrame(() => updateCursorPosition(e));
+    cursor.classList.remove('hidden');
 });
 
 // Shrink cursor on mouse down
@@ -46,20 +69,23 @@ document.addEventListener('mouseup', () => {
 
 // Hide cursor on mobile tap
 document.addEventListener('touchstart', () => {
+    cursor.classList.remove('active');
+    cursor.classList.remove('hover');
     cursor.classList.add('hidden');
+    cursor.style.display = 'none';
 });
 
 // Mouse leaves window: hide cursor
 document.addEventListener('mouseleave', () => {
     cursor.classList.add('hidden');
-    cursor.style.display = 'none'; 
+    cursor.style.display = 'none';
 });
 
 // Mouse enters window: show cursor
 document.addEventListener('mouseenter', (e) => {
     cursor.classList.remove('hidden');
-    cursor.style.display = 'block'; 
-    updateCursorPosition(e); 
+    cursor.style.display = 'block';
+    updateCursorPosition(e);
 });
 
 // Make cursor a line while hovering over text elements
@@ -89,6 +115,7 @@ document.querySelectorAll('a, .custom-thumb, .card-container img').forEach(el =>
 /// MARK: - HOME ICON ON NAVBAR
 
 const homeIcon = document.getElementById('home-icon');
+
 homeIcon.addEventListener('mouseenter', () => {
     homeIcon.src = './Assets/home-glow.png';
 });
@@ -97,6 +124,9 @@ homeIcon.addEventListener('mouseleave', () => {
     homeIcon.src = './Assets/home.png';
 });
 
+homeIcon.addEventListener('touchend', (e) => {
+    homeIcon.src = './Assets/home.png';
+});
 
 /// MARK: - PROJECT SCROLLBAR
 
@@ -126,10 +156,10 @@ let startX;
 thumb.addEventListener('mousedown', (e) => {
     isDragging = true;
     startX = e.clientX - thumb.offsetLeft;
-    cursor.classList.add('hidden'); 
-    cursor.classList.remove('active'); 
-    thumb.classList.add('hover'); 
-    document.body.style.cursor = 'none'; 
+    cursor.classList.add('hidden');
+    cursor.classList.remove('active');
+    thumb.classList.add('hover');
+    document.body.style.cursor = 'none';
     e.preventDefault();
 });
 
@@ -146,19 +176,16 @@ document.addEventListener('mousemove', (e) => {
 
 document.addEventListener('mouseup', () => {
     isDragging = false;
-    document.body.style.cursor = ''; 
-    cursor.classList.remove('hidden'); 
-    thumb.classList.remove('hover'); 
+    document.body.style.cursor = '';
+    cursor.classList.remove('hidden');
+    thumb.classList.remove('hover');
 });
 
-// Update thumb size on load
 window.addEventListener('load', updateThumbSize);
 
-// Update thumb size on resize and sync initial position
 window.addEventListener('resize', updateThumbSize);
 cardContainer.addEventListener('scroll', syncScroll);
 
-// Initialize thumb size
 updateThumbSize();
 
 
@@ -166,19 +193,45 @@ updateThumbSize();
 
 const images = document.querySelectorAll('.card-container img');
 
-images.forEach((image) => {
-    image.addEventListener('mousemove', (e) => {
-        const rect = image.getBoundingClientRect(); 
-        const offsetX = e.clientX - rect.left; 
-        const offsetY = e.clientY - rect.top;  
+if (window.matchMedia('(min-width: 768px)').matches) {
+    images.forEach((image) => {
+        image.addEventListener('mousemove', (e) => {
+            const rect = image.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
 
-        const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 3.5, 8)); 
-        const shadowY = Math.max(0, Math.min((offsetY / rect.height - 0.5) * 4, 4));
+            const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 3.5, 8));
+            const shadowY = Math.max(0, Math.min((offsetY / rect.height - 0.5) * 4, 4));
 
-        image.style.boxShadow = `${shadowX}px ${shadowY}px 0px 3px rgba(255, 255, 255, 0.3)`;
+            image.style.boxShadow = `${shadowX}px ${shadowY}px 0px 4px rgba(255, 255, 255, 0.3)`;
+        });
+
+        image.addEventListener('mouseleave', () => {
+            image.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+        });
     });
+}
 
-    image.addEventListener('mouseleave', () => {
-        image.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+/// MARK: - CONTACTS
+
+const contactLinks = document.querySelectorAll('.contact-buttons a');
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+    contactLinks.forEach((link) => {
+        link.addEventListener('mousemove', (e) => {
+            const rect = link.getBoundingClientRect();
+            const offsetX = e.clientX - rect.left;
+            const offsetY = e.clientY - rect.top;
+
+            const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 3.5, 8));
+            const shadowY = Math.max(0, Math.min((offsetY / rect.height - 0.5) * 4, 4));
+
+            link.style.boxShadow = `${shadowX}px ${shadowY}px 0px 4px rgba(255, 255, 255, 0.3)`;
+        });
+
+        link.addEventListener('mouseleave', () => {
+            link.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+        });
     });
-});
+}
+
