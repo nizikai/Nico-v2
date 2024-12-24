@@ -9,6 +9,15 @@ body {
     box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+    width: 0px;  
+    height: 0px; 
+}
+
+html {
+    scrollbar-width: none;  
+}
+
 /* MARK: CURSOR STYLES */
 
 .cursor {
@@ -66,7 +75,7 @@ body {
 }
 
 #navbar img {
-    width: 5vmin;
+    width: 5vh;
     padding: 4px;
     cursor: none;
     transition: transform 0.5s ease;
@@ -326,6 +335,24 @@ body {
     }
 }
 
+/* MARK: NAVIGATION */
+
+.page-dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); 
+    transition: background 0.5s ease; 
+    pointer-events: none; 
+    z-index: 10; 
+}
+
+.page-dim.active {
+    background: rgba(0, 0, 0, 1); 
+}
+
 /* MARK: PROJECT SCROLLBAR */
 
 .custom-scrollbar {
@@ -375,6 +402,7 @@ body {
     font-size: 4vh;
     text-align: left;
     z-index: 1;
+    width: fit-content;
 }
 
 .contact-buttons {
@@ -400,6 +428,7 @@ body {
     box-sizing: border-box; 
     transform: translateX(-8px);
     animation: blur-in 0.5s ease;
+    cursor: none;
 }
 
 .contact-buttons a:hover {
@@ -407,6 +436,37 @@ body {
     border-radius: 8px;
     transition: background-color 0.2s ease;
 }
+
+
+.more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    height: 30vh;
+}
+
+#rounded-box {
+    width: 50vw;
+    height: 170px;
+    border-radius: 16px 16px 0 0;
+    background-color: #4d4d4d;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 1;
+    transition: transform 0.3s ease, bottom 0.3s ease;
+}
+
+/* Styles when the box scales and moves up */
+#rounded-box.scaled-up {
+    transform: translateX(-50%) translateY(50px) scale(1.5); /* Scale up and move up */
+    bottom: 20px; /* Moves the box upwards, giving the "out of wallet" effect */
+    z-index: 9999; /* Ensure it overlaps other sections */
+}
+
 
 .footnote{
     color: #f5f5f5;
@@ -426,4 +486,89 @@ body {
     color: rgba(255, 255, 255, 0.5);
     font-size: 1.5vh;
     font-family: Consolas, monospace;
+}
+
+
+/* MARK: GLOBAL PROJECT DETAIL */
+
+.project-header {
+    position: relative;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    animation: fadeInBackground 0.5s ease-in-out forwards; 
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.project-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: opacity 2s ease-in-out; 
+    z-index: -1; 
+}
+
+.project-header.loaded::before {
+    opacity: 1;
+}
+
+.project-header .year {
+    position: absolute;
+    top: 2px;
+    right: 1vw;
+    padding: 10px;
+    font-size: 2.5vh;
+    color: #f5f5f5;
+}
+
+.project-header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 40vh; 
+    color: #f5f5f5;
+}
+
+.project-header .logo img {
+    width: 8vh;
+    height: 8vh; 
+}
+
+.project-header .title{
+    height: 40vh;
+}
+
+.project-header .title p{
+    font-size: 5vh;
+    color: #f5f5f5;
+    text-align: center;
+    animation: blur-in 1s ease-out forwards;
+}
+
+.project-header .description {
+    height: 20vh;
+}
+
+.project-header .description p{
+    font-size: 2vh;
+    color: #7b7b7b;
+    text-align: center;
 }

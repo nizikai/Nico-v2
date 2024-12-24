@@ -89,9 +89,25 @@ document.addEventListener('mouseenter', (e) => {
 });
 
 // Make cursor a line while hovering over text elements
+
+// document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
+//     el.addEventListener('mouseenter', () => {
+//         const textHeight = el.getBoundingClientRect().height;
+//         cursor.style.height = `${textHeight}px`;
+//         cursor.classList.add('hover');
+//     });
+
+//     el.addEventListener('mouseleave', () => {
+//         cursor.style.height = '';
+//         cursor.classList.remove('hover');
+//     });
+// });
+
 document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
     el.addEventListener('mouseenter', () => {
-        const textHeight = el.getBoundingClientRect().height;
+        const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight);
+        const lines = el.innerText.split('\n').length;
+        const textHeight = lineHeight * lines;
         cursor.style.height = `${textHeight}px`;
         cursor.classList.add('hover');
     });
@@ -212,6 +228,29 @@ if (window.matchMedia('(min-width: 768px)').matches) {
     });
 }
 
+///MARK: NAVIGATION
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.card-container img');
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('page-dim');
+    document.body.appendChild(overlay);
+
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            overlay.classList.add('active');
+
+            const targetLink = card.getAttribute('data-link');
+            if (targetLink) {
+                setTimeout(() => {
+                    window.location.href = targetLink;
+                }, 500); 
+            }
+        });
+    });
+});
+
 /// MARK: - CONTACTS
 
 const contactLinks = document.querySelectorAll('.contact-buttons a');
@@ -234,4 +273,32 @@ if (window.matchMedia('(min-width: 768px)').matches) {
         });
     });
 }
+
+/// MARK: - MORE SECTION CARD SCALING
+
+document.addEventListener('DOMContentLoaded', () => {
+    const roundedBox = document.querySelector('#rounded-box');
+    const moreSection = document.querySelector('.more');
+    
+    let hasScaled = false; // Flag to prevent multiple scaling
+
+    const handleScroll = () => {
+        const scrollPosition = window.scrollY + window.innerHeight; // Current viewport bottom
+        const documentHeight = document.documentElement.scrollHeight; // Total page height
+        const moreSectionHeight = moreSection.offsetHeight; // Height of the "more" section
+
+        // Check if the user has scrolled beyond the page and if the box is not yet scaled
+        if (scrollPosition >= documentHeight && !hasScaled) {
+            // The user is past the page end, start scaling the box
+            roundedBox.classList.add('scaled-up'); // Scale and move it up
+            hasScaled = true; // Prevent repeated scaling
+        } else if (scrollPosition < documentHeight && hasScaled) {
+            // If user scrolls back up, reset scaling
+            roundedBox.classList.remove('scaled-up');
+            hasScaled = false; // Allow it to scale again when scrolling down
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+});
 
