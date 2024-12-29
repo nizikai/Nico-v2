@@ -346,7 +346,7 @@ html {
     background: rgba(0, 0, 0, 0); 
     transition: background 0.5s ease; 
     pointer-events: none; 
-    z-index: 10; 
+    z-index: 9998; 
 }
 
 .page-dim.active {
@@ -390,7 +390,7 @@ html {
 /* MARK: CONTACTS */
 
 #contact {
-    height: 50vh;
+    height: 43vh;
     margin-left: 10.5vw;
     margin-right: 10vw;
     display: flex;
@@ -437,6 +437,19 @@ html {
     transition: background-color 0.2s ease;
 }
 
+.footnote{
+    font-size: 2vh;
+    text-align: left;
+    padding-top: 32px;
+    width: auto;
+}
+
+.footnote p {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0; 
+    padding: 0;
+    width: fit-content;
+}
 
 .more {
     display: flex;
@@ -444,54 +457,66 @@ html {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    height: 30vh;
+    height: 45vh;
+}
+
+.more p{
+    font-size: 2vh;
+    color: #f5f5f5;
+    text-align: center;
+    align-items: start;
+    height: fit-content;
+    width: fit-content;
+
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+    z-index: 1;
+    opacity: 0.2;
+    transition: transform 0.3s ease, bottom 0.3s ease, opacity 0.3s ease;
+}
+
+.more p.scaled-up {
+    transform: translateX(-50%) translateY(50px); 
+    bottom: 325px; 
+    opacity: 1;
 }
 
 #rounded-box {
     width: 50vw;
-    height: 170px;
+    height: 250px;
     border-radius: 16px 16px 0 0;
-    background-color: #4d4d4d;
     position: absolute;
-    bottom: -50px;
+    bottom: -132px;
     left: 50%;
     transform: translateX(-50%) scale(1);
     z-index: 1;
-    transition: transform 0.3s ease, bottom 0.3s ease;
+    opacity: 0.2;
+    transition: transform 0.3s ease, bottom 0.3s ease, box-shadow 0s ease, opacity 0.3s ease;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+
+    background-image: url('./Assets/banner.jpg');
+    background-image: url('./Assets/banner.jpg');
+    background-size: cover; 
+    background-position: bottom center; 
+    background-repeat: no-repeat; 
 }
 
-/* Styles when the box scales and moves up */
 #rounded-box.scaled-up {
-    transform: translateX(-50%) translateY(50px) scale(1.5); /* Scale up and move up */
-    bottom: 20px; /* Moves the box upwards, giving the "out of wallet" effect */
-    z-index: 9999; /* Ensure it overlaps other sections */
+    transform: translateX(-50%) translateY(50px) scale(1.5); 
+    bottom: 16px; 
+    opacity: 0.6;
 }
 
-
-.footnote{
-    color: #f5f5f5;
-    font-size: 2vh;
-    text-align: left;
-    padding-top: 64px;
-    width: auto;
+#rounded-box:hover{
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    opacity: 0.6;
 }
 
-.footnote p {
-    margin: 0; 
-    padding: 0;
-    width: fit-content;
-}
+/* MARK: PROJECT DETAIL ON NEW PAGE*/
 
-.footnote p:nth-child(2) {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 1.5vh;
-    font-family: Consolas, monospace;
-}
-
-
-/* MARK: GLOBAL PROJECT DETAIL */
-
-.project-header {
+.background-header {
     position: relative;
     height: 100vh; 
     background-size: cover;
@@ -509,13 +534,9 @@ html {
     }
 }
 
-.project-header::before {
+.background-header::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-image: inherit;
     background-size: cover;
     background-position: center center;
@@ -525,20 +546,26 @@ html {
     z-index: -1; 
 }
 
-.project-header.loaded::before {
+.background-header.loaded::before {
     opacity: 1;
 }
 
-.project-header .year {
+.background-header .year {
+    width: auto;
+}
+
+.background-header .year p{
     position: absolute;
     top: 2px;
     right: 1vw;
     padding: 10px;
     font-size: 2.5vh;
     color: #f5f5f5;
+    height: fit-content;
+    width: fit-content;
 }
 
-.project-header .logo {
+.background-header .logo-40-end {
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -547,28 +574,115 @@ html {
     color: #f5f5f5;
 }
 
-.project-header .logo img {
+.background-header .logo-40-end img {
     width: 8vh;
     height: 8vh; 
 }
 
-.project-header .title{
-    height: 40vh;
+.background-header .title-30-center{
+    padding-top: 16px;
+    height: 30vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    animation: blur-in 1s ease forwards;
 }
 
-.project-header .title p{
+.background-header .title-30-center p{
     font-size: 5vh;
     color: #f5f5f5;
     text-align: center;
-    animation: blur-in 1s ease-out forwards;
+    height: fit-content;
+    width: fit-content;
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
 }
 
-.project-header .description {
-    height: 20vh;
+.description-30-center {
+    height: 30vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.project-header .description p{
+.description-30-center p{
     font-size: 2vh;
     color: #7b7b7b;
     text-align: center;
+    animation: blur-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+    height: fit-content;
+    width: fit-content;
 }
+
+.description-10-center {
+    height: 10vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.description-10-center p{
+    font-size: 2.5vh;
+    color: #7b7b7b;
+    text-align: center;
+    animation: blur-in 1s ease forwards;
+    opacity: 0;
+    animation-delay: 0.5s;
+    height: fit-content;
+    width: fit-content;
+}
+
+.background-header-static {
+    position: relative;
+    height: 120vh; 
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.big-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+    animation: blur-in 1s ease forwards;
+}
+
+.big-text p{
+    font-size: 5vh;
+    color: #f5f5f5;
+    text-align: center;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.big-text .contact-buttons{
+    padding-top: 10vh;
+    padding-left: 1.2vw;
+    align-items: center;
+    justify-content: center;
+}
+
+
+

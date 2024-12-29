@@ -15,47 +15,69 @@
 </head>
 
 <body>
-
     <section id="navbar">
-        <a href="#projects">
-            <img src="./Assets/home.png" id="home-icon">
-        </a>
+        <img src="./Assets/home.png" data-link="me.html" class="go-home" id="home-icon" />
     </section>
 
-    <section id="intro">
-        <div id="intro-images">
-            <img src="Assets/hi-1.png">
-            <img src="Assets/hi-2.png">
-            <img src="Assets/hi-3.png">
-            <img src="Assets/hi-4.png" alt="Hi!">
-        </div>
-        <div id="intro-text">
-            <span class="part">I</span>
-            <span class="part">am</span>
-            <span class="part">Nico.</span>
-        </div>
+    <section class="big-text">
+        <p>Creating an Interactive Way</p>
+        <p>for Digital and Real Worlds</p>
+        <p>to Seamlessly Blend.</p>
+        <div class="contact-buttons">
+            <a href="./Files/resume.pdf"
+                target="_blank">
+                <img src="Assets/download.png" />
+                Download Resume
+            </a>
         </div>
     </section>
 
-    <section id="projects">
-        <div class="text-container">
-            <div class="gradient-text">Watch my clicks and clacks</div>
-            <div class="gradient-text">turn into wonderful things.</div>
+    <section>
+        <div class="description-10-center">
+            <p>With skills and values shaped by mentors, colleagues, also personal and collaborative projects from</p>
         </div>
     </section>
 
-    <section class="cards">
-        <div class="card-container">
-            <img src="Assets/card-unconfined.png" data-link="unconfined.html" />
-            <img src="Assets/card-dexter.png" data-link="dexter.html" />
-            <img src="Assets/card-immersive.png" data-link="immersive.html" />
-            <img src="Assets/card-ajari.png" data-link="ajari.html" />
-            <img src="Assets/card-composar.png" data-link="composar.html" />
-            <img src="Assets/card-decorlens.png" data-link="decorlens.html" />
-            <img src="Assets/card-next.png" data-link="next.html" />
+    <section class="background-header-static" style="background-image: url('./Assets/bg-academy.jpg');">
+        <div class="big-text">
+            <p>Apple Developer Academy</p>
         </div>
-        <div class="custom-scrollbar">
-            <div class="custom-thumb"></div>
+    </section>
+
+    <section class="background-header-static" style="background-image: url('./Assets/bg-ciputra.jpg');">
+        <div class="big-text">
+            <p>Information Systems for Business Bachelor's</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="description-10-center">
+            <p>Awarded as a</p>
+        </div>
+    </section>
+
+    <section class="background-header-static" style="background-image: url('./Assets/bg-ssc.jpg');">
+        <div class="big-text">
+            <p>2023 & 2024 Swift Student Challenge Winner</p>
+        </div>
+    </section>
+
+    <section>
+        <div class="description-10-center">
+            <p>Certified by</p>
+        </div>
+    </section>
+
+    <section class="background-header-static" style="background-image: url('./Assets/bg-certification.jpg');">
+        <div class="big-text">
+            <p>Indonesian Professional Certification Authority</p>
+            <div class="contact-buttons">
+                <a href="./Files/certification.pdf"
+                    target="_blank">
+                    <img src="Assets/download.png" />
+                    Download Cerfiticate
+                </a>
+            </div>
         </div>
     </section>
 
@@ -100,13 +122,8 @@
         </div>
     </section>
 
-    <section class="more">
-        <p>Get to know Nico and, oh, his resume below!</p>
-        <div id="rounded-box" data-link="nico.html">
-        </div>
-    </section>
-
     <script src="./app.js"></script>
+    <script src="./to-home.js"></script>
 </body>
 
 </html>

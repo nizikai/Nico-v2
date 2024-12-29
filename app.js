@@ -2,9 +2,9 @@
 
 window.history.scrollRestoration = 'manual';
 
-window.onload = function () {
+window.addEventListener('DOMContentLoaded', () => {
     window.scrollTo(0, 0);
-};
+});
 
 ///MARK: - INTRO ANIMATION
 
@@ -33,7 +33,7 @@ function showProjectsAfterIntro() {
     }
 }
 
-window.onload = showProjectsAfterIntro;
+window.addEventListener('DOMContentLoaded', showProjectsAfterIntro);
 
 /// MARK: - CURSOR
 
@@ -90,19 +90,6 @@ document.addEventListener('mouseenter', (e) => {
 
 // Make cursor a line while hovering over text elements
 
-// document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
-//     el.addEventListener('mouseenter', () => {
-//         const textHeight = el.getBoundingClientRect().height;
-//         cursor.style.height = `${textHeight}px`;
-//         cursor.classList.add('hover');
-//     });
-
-//     el.addEventListener('mouseleave', () => {
-//         cursor.style.height = '';
-//         cursor.classList.remove('hover');
-//     });
-// });
-
 document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
     el.addEventListener('mouseenter', () => {
         const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight);
@@ -119,7 +106,7 @@ document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').for
 });
 
 // Hide cursor while hovering over links or specific elements
-document.querySelectorAll('a, .custom-thumb, .card-container img').forEach(el => {
+document.querySelectorAll('a, .custom-thumb, .card-container img, .go-home, #rounded-box').forEach(el => {
     el.addEventListener('mouseenter', () => {
         cursor.classList.add('hover-link');
     });
@@ -251,54 +238,97 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/// MARK: - CONTACTS
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('#rounded-box');
 
-const contactLinks = document.querySelectorAll('.contact-buttons a');
+    const overlay = document.createElement('div');
+    overlay.classList.add('page-dim');
+    document.body.appendChild(overlay);
 
-if (window.matchMedia('(min-width: 768px)').matches) {
-    contactLinks.forEach((link) => {
-        link.addEventListener('mousemove', (e) => {
-            const rect = link.getBoundingClientRect();
-            const offsetX = e.clientX - rect.left;
-            const offsetY = e.clientY - rect.top;
+    cards.forEach(card => {
+        card.addEventListener('click', () => {
+            overlay.classList.add('active');
 
-            const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 3.5, 8));
-            const shadowY = Math.max(0, Math.min((offsetY / rect.height - 0.5) * 4, 4));
-
-            link.style.boxShadow = `${shadowX}px ${shadowY}px 0px 4px rgba(255, 255, 255, 0.3)`;
-        });
-
-        link.addEventListener('mouseleave', () => {
-            link.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+            const targetLink = card.getAttribute('data-link');
+            if (targetLink) {
+                setTimeout(() => {
+                    window.location.href = targetLink;
+                }, 500); 
+            }
         });
     });
-}
+});
 
-/// MARK: - MORE SECTION CARD SCALING
+/// MARK: - CONTACTS
+
+document.addEventListener('DOMContentLoaded', () => {
+    const contactLinks = document.querySelectorAll('.contact-buttons a');
+
+    if (window.matchMedia('(min-width: 768px)').matches) {
+        contactLinks.forEach((link) => {
+            link.addEventListener('mousemove', (e) => {
+                const rect = link.getBoundingClientRect();
+                const offsetX = e.clientX - rect.left;
+                const offsetY = e.clientY - rect.top;
+
+                const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 3.5, 8));
+                const shadowY = Math.max(0, Math.min((offsetY / rect.height - 0.5) * 4, 4));
+
+                link.style.boxShadow = `${shadowX}px ${shadowY}px 0px 4px rgba(255, 255, 255, 0.3)`;
+            });
+
+            link.addEventListener('mouseleave', () => {
+                link.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+            });
+        });
+    }
+});
+
+/// MARK: - CARD SCALING UP FOOTER
 
 document.addEventListener('DOMContentLoaded', () => {
     const roundedBox = document.querySelector('#rounded-box');
-    const moreSection = document.querySelector('.more');
-    
-    let hasScaled = false; // Flag to prevent multiple scaling
+    const moreText = document.querySelector('.more p');
+
+    let hasScaled = false;
 
     const handleScroll = () => {
-        const scrollPosition = window.scrollY + window.innerHeight; // Current viewport bottom
-        const documentHeight = document.documentElement.scrollHeight; // Total page height
-        const moreSectionHeight = moreSection.offsetHeight; // Height of the "more" section
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
 
-        // Check if the user has scrolled beyond the page and if the box is not yet scaled
         if (scrollPosition >= documentHeight && !hasScaled) {
-            // The user is past the page end, start scaling the box
-            roundedBox.classList.add('scaled-up'); // Scale and move it up
-            hasScaled = true; // Prevent repeated scaling
+            roundedBox.classList.add('scaled-up');
+            moreText.classList.add('scaled-up');
+            hasScaled = true;
         } else if (scrollPosition < documentHeight && hasScaled) {
-            // If user scrolls back up, reset scaling
             roundedBox.classList.remove('scaled-up');
-            hasScaled = false; // Allow it to scale again when scrolling down
+            moreText.classList.remove('scaled-up');
+            hasScaled = false;
         }
     };
 
     window.addEventListener('scroll', handleScroll);
 });
+
+const roundedBox = document.querySelector('#rounded-box');
+
+if (window.matchMedia('(min-width: 768px)').matches) {
+    roundedBox.addEventListener('mousemove', (e) => {
+        const rect = roundedBox.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left;
+        const offsetY = e.clientY - rect.top;
+
+        // Calculate shadow offsets
+        const shadowX = Math.max(-2, Math.min((offsetX / rect.width - 0.5) * 4, 4));
+        const shadowY = Math.max(-2, Math.min((offsetY / rect.height - 0.5) * 4, 4));
+
+        // Apply shadow effect
+        roundedBox.style.boxShadow = `${shadowX}px ${shadowY}px 0px 3px rgba(255, 255, 255, 0.3)`;
+    });
+
+    roundedBox.addEventListener('mouseleave', () => {
+        // Reset shadow on mouse leave
+        roundedBox.style.boxShadow = '0px 0px 0px 0px rgba(255, 255, 255, 0.3)';
+    });
+}
 
