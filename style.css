@@ -268,7 +268,6 @@ html {
     flex-direction: row;
     border-radius: 16px;
     margin-right: 0;
-
 }
 
 .card-container img {
@@ -441,6 +440,7 @@ html {
     font-size: 2vh;
     text-align: left;
     padding-top: 32px;
+    padding-bottom: 5vh;
     width: auto;
 }
 
@@ -620,8 +620,8 @@ html {
     width: fit-content;
 }
 
-.description-10-center {
-    height: 10vh;
+.description-12-center {
+    height: 12vh;
     width: auto;
     display: flex;
     justify-content: center;
@@ -682,6 +682,140 @@ html {
     padding-left: 1.2vw;
     align-items: center;
     justify-content: center;
+}
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+    height: 50vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.quote p{
+    font-size: 5vh;
+    color: #f5f5f5;
+    text-align: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
+}
+
+.quote .source{
+    padding-top: 8px;
+    font-size: 2.5vh;
+    font-style: italic;
+    font-weight: 200;
+}
+
+.list-20{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 20vh;
+}
+
+.list-30{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 30vh;
+}
+
+.list-40{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 40vh;
+}
+
+.list-50{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    height: 50vh;
+}
+
+.list-label{
+    font-size: 2vh;
+    color: #7b7b7b;
+    text-align: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
+}
+
+.list-item{
+    font-size: 5vh;
+    color: #f5f5f5;
+    text-align: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
+}
+
+.caption{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+
+    height: 50vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.caption-label{
+    font-size: 2vh;
+    color: #7b7b7b;
+    text-align: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
+}
+
+.caption-item{
+    font-size: 2vh;
+    color: #f5f5f5;
+    text-align: left;
+
+    height: fit-content;
+    width: fit-content;
+
+    line-height: 1.2;
+    margin: 0; 
+    padding: 0;
 }
 
 

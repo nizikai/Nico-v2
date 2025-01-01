@@ -89,7 +89,6 @@ document.addEventListener('mouseenter', (e) => {
 });
 
 // Make cursor a line while hovering over text elements
-
 document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
     el.addEventListener('mouseenter', () => {
         const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight);
