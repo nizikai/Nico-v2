@@ -57,6 +57,21 @@ document.addEventListener('mousemove', (e) => {
     cursor.classList.remove('hidden');
 });
 
+function throttle(callback, delay) {
+    let lastCall = 0;
+    return function (...args) {
+        const now = new Date().getTime();
+        if (now - lastCall < delay) return;
+        lastCall = now;
+        callback(...args);
+    };
+}
+
+document.addEventListener(
+    'mousemove',
+    throttle((e) => updateCursorPosition(e), 16)
+);
+
 // Shrink cursor on mouse down
 document.addEventListener('mousedown', () => {
     cursor.classList.add('active');
@@ -89,7 +104,7 @@ document.addEventListener('mouseenter', (e) => {
 });
 
 // Make cursor a line while hovering over text elements
-document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, .gradient-text').forEach(el => {
+document.querySelectorAll('p, span, h1, h2, h3, h4, h5, h6, li, .gradient-text').forEach(el => {
     el.addEventListener('mouseenter', () => {
         const lineHeight = parseFloat(window.getComputedStyle(el).lineHeight);
         const lines = el.innerText.split('\n').length;
@@ -189,7 +204,6 @@ window.addEventListener('resize', updateThumbSize);
 cardContainer.addEventListener('scroll', syncScroll);
 
 updateThumbSize();
-
 
 /// MARK: - PROJECTS CARDS HOVER EFFECT
 

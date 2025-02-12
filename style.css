@@ -1,34 +1,35 @@
-html,
-body {
+html {
     scroll-behavior: smooth;
+    scrollbar-width: none;  
     background-color: black;
     font-family: 'DM Sans', sans-serif;
     overflow-x: hidden;
     cursor: none !important;
-    margin: 0;
+
     box-sizing: border-box;
 }
+
 
 ::-webkit-scrollbar {
     width: 0px;  
     height: 0px; 
 }
 
-html {
-    scrollbar-width: none;  
+body {
+    margin: 0;
 }
 
 /* MARK: CURSOR STYLES */
 
 .cursor {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: rgba(134, 130, 133, 0.7);
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: transform 0.3s ease, width 0.1s ease, height 0.1s ease, background-color 0.2s ease, border-radius 0.1s ease;
+    transition: transform 1s ease, width 0.1s ease-in-out, height 0.1s ease-in-out, background-color 0.2s ease, border-radius 0.1s ease;
     z-index: 10000;
 }
 
@@ -458,7 +459,7 @@ html {
     justify-content: center;
     position: relative;
     overflow: hidden;
-    height: 45vh;
+    height: 49vh;
 }
 
 .more p{
@@ -819,6 +820,12 @@ html {
     padding: 0;
 }
 
+.compact-list {
+    margin: 0; 
+    padding: 0;
+    padding-left: 1em;
+}
+
 .link-redirection{
     display: flex;
     flex-direction: column;
@@ -828,8 +835,6 @@ html {
     height: 10vh;
     margin-left: 10vw;
     margin-right: 10vw;
-
-    /* background-color: red; */
 }
 
 
