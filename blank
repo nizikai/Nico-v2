@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Nico Prasetyo</title>
+    <link rel="icon" href="./Assets/icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="navbar">
+        <img src="./Assets/home.png" data-link="me.html" class="go-home" id="home-icon" />
+    </section>
+
+    <!-- code here -->
+
+    <section id="contact">
+        <div class="connect-container">
+            <p>Let's connect!</p>
+        </div>
+        <div class="contact-buttons">
+            <a href="mailto:me@nicoprasetyo.com" target="_blank">
+                <img src="Assets/email.png" />
+                Email
+            </a>
+        </div>
+        <div class="contact-buttons">
+            <a href="https://www.linkedin.com/in/nicoprasetyo/" target="_blank">
+                <img src="Assets/linkedin.png" />
+                LinkedIn
+            </a>
+        </div>
+        <div class="contact-buttons">
+            <a href="https://api.whatsapp.com/send?phone=6282252855386&amp;text=Hi%20Nico!%20I%20found%20you%20from%20your%20website!"
+                target="_blank">
+                <img src="Assets/whatsapp.png" />
+                Whatsapp
+            </a>
+        </div>
+        <div class="contact-buttons">
+            <a href="https://line.me/ti/p/~nicoprasetyo10" target="_blank">
+                <img src="Assets/line.png" />
+                Line
+            </a>
+        </div>
+        <div class="contact-buttons">
+            <a href="https://github.com/nizikai" target="_blank">
+                <img src="Assets/github.png" />
+                Github
+            </a>
+        </div>
+        <div class="footnote">
+            <p>2025 Nico Prasetyo</p>
+            <p>//Soli Deo Gloria</p>
+        </div>
+    </section>
+
+    <script src="./app.js"></script>
+    <script src="./to-home.js"></script>
+</body>
+
+</html>
