@@ -391,7 +391,7 @@ body {
 
 #contact {
     height: 45vh;
-    margin-left: 10.5vw;
+    margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 5vh;
     display: flex;
@@ -590,8 +590,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     animation: blur-in 1s ease forwards;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .background-header .title-30-center p{
@@ -630,8 +630,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .description-12-center p{
@@ -671,8 +671,8 @@ body {
     align-items: center;
 
     height: 100vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 
     animation: blur-in 1s ease forwards;
 }
@@ -706,8 +706,8 @@ body {
     align-items: left;
 
     height: 50vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .quote p{
@@ -735,8 +735,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     height: 20vh;
 }
 
@@ -745,8 +745,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     height: 30vh;
 }
 
@@ -755,8 +755,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     height: 40vh;
 }
 
@@ -765,8 +765,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: left;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     height: 50vh;
 }
 
@@ -803,8 +803,8 @@ body {
     align-items: left;
 
     height: auto;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 .caption-item{
@@ -833,8 +833,8 @@ body {
     align-items: left;
 
     height: 10vh;
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
 }
 
 
