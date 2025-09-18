@@ -164,8 +164,7 @@ class PracticeTool {
         this.audioContext = new AudioContext();
         this.noteFrequencies = this.getAllNoteFrequencies(); 
         this.chordStringDatabase = this.buildChordStringDatabase();
-        // this.bufferSize = 4096; 
-        this.bufferSize = 4096*2; 
+        this.bufferSize = 4096; 
         this.confidenceThreshold = -65;
         this.sourceNode = null;
         this.analyser = null;

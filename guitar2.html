@@ -165,7 +165,7 @@ class PracticeTool {
         this.noteFrequencies = this.getAllNoteFrequencies(); 
         this.chordStringDatabase = this.buildChordStringDatabase();
         // this.bufferSize = 4096; 
-        this.bufferSize = 4096*2; 
+        this.bufferSize = 4096*8; 
         this.confidenceThreshold = -65;
         this.sourceNode = null;
         this.analyser = null;
@@ -487,14 +487,14 @@ class PracticeTool {
     
     buildChordStringDatabase() {
         return {
-            "C": { notes: { E4: "E4", B3: "C4", G3: "G3", D3: "E3", A2: "C3", E2: "Muted" }, fingering: { B3: { fingerKey: "index" }, D3: { fingerKey: "middle" }, A2: { fingerKey: "ring" } }, threshold: 60 },
+            "C": { notes: { E4: "E4", B3: "C4", G3: "G3", D3: "E3", A2: "C3", E2: "Muted" }, fingering: { B3: { fingerKey: "index" }, D3: { fingerKey: "middle" }, A2: { fingerKey: "ring" } }, threshold: 90 },
             "G": { notes: { E4: "G4", B3: "B3", G3: "G3", D3: "D3", A2: "B2", E2: "G2" }, fingering: { E2: { fingerKey: "middle" }, A2: { fingerKey: "index" }, E4: { fingerKey: "ring" } }, threshold: 50 },
             "D": { notes: { E4: "F#4", B3: "D4", G3: "A3", D3: "D3", A2: "Muted", E2: "Muted" }, fingering: { G3: { fingerKey: "index" }, E4: { fingerKey: "middle" }, B3: { fingerKey: "ring" } }, threshold: 55 },
             "A": { notes: { E4: "E4", B3: "C#4", G3: "A3", D3: "E3", A2: "A2", E2: "Muted" }, fingering: { D3: { fingerKey: "index" }, G3: { fingerKey: "middle" }, B3: { fingerKey: "ring" } }, threshold: 60 },
             "E": { notes: { E4: "E4", B3: "B3", G3: "G#3", D3: "E3", A2: "B2", E2: "E2" }, fingering: { G3: { fingerKey: "index" }, A2: { fingerKey: "middle" }, D3: { fingerKey: "ring" } }, threshold: 50 },
             "Am": { notes: { E4: "E4", B3: "C4", G3: "A3", D3: "E3", A2: "A2", E2: "Muted" }, fingering: { B3: { fingerKey: "index" }, D3: { fingerKey: "middle" }, G3: { fingerKey: "ring" } }, threshold: 60 },
             "Em": { notes: { E4: "E4", B3: "B3", G3: "G3", D3: "E3", A2: "B2", E2: "E2" }, fingering: { A2: { fingerKey: "index" }, D3: { fingerKey: "middle" } }, threshold: 50 },
-            "Dm": { notes: { E4: "F4", B3: "D4", G3: "A3", D3: "D3", A2: "Muted", E2: "Muted" }, fingering: { E4: { fingerKey: "index" }, G3: { fingerKey: "middle" }, B3: { fingerKey: "ring" } }, threshold: 50 },
+            "Dm": { notes: { E4: "F4", B3: "D4", G3: "A3", D3: "D3", A2: "Muted", E2: "Muted" }, fingering: { E4: { fingerKey: "index" }, G3: { fingerKey: "middle" }, B3: { fingerKey: "ring" } }, threshold: 80 },
             "F": { notes: { E4: "F4", B3: "C4", G3: "A3", D3: "F3", A2: "C3", E2: "F2" }, fingering: { E2: { fingerKey: "barre" }, E4: { fingerKey: "barre" }, B3: { fingerKey: "barre" }, G3: { fingerKey: "middle" }, A2: { fingerKey: "ring" }, D3: { fingerKey: "pinky" } }, threshold: 55 },
             "F (Easy)": { notes: { E4: "F4", B3: "C4", G3: "A3", D3: "F3", A2: "Muted", E2: "Muted" }, fingering: { B3: { fingerKey: "index" }, E4: { fingerKey: "index" }, G3: { fingerKey: "middle" }, D3: { fingerKey: "ring" } }, threshold: 65 },
             "Bm": { notes: { E4: "F#4", B3: "D4", G3: "B3", D3: "F#3", A2: "B2", E2: "Muted" }, fingering: { A2: { fingerKey: "barre" }, B3: { fingerKey: "middle" }, D3: { fingerKey: "pinky" }, G3: { fingerKey: "ring" } }, threshold: 60 },
